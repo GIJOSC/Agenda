@@ -1,7 +1,5 @@
 package com.devinhouse.agenda.contatos.modelo;
 
-import java.util.Objects;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -82,9 +80,11 @@ public class Contato {
 		Contato other = (Contato) obj;
 		return id == other.id;
 	}
-	
-	
-	
-	
 
+	@Override
+	public String toString() {
+		return "Contato [id=" + id + ", nome=" + nome + ", telefone=" + telefone + ", email=" + email + ", urlAvatar="
+				+ urlAvatar + "]";
+	}
+	
 }
